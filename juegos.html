@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salto del Rombo al Hacer Clic</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #e39ef5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rombo {
+      width: 100px;
+      height: 100px;
+      background-color: #23a053; /* Color rojo del rombo */
+      position: relative;
+      transform: rotate(45deg); /* Rotar 45 grados para darle forma de rombo */
+      transition: transform 0.3s ease-in-out; /* Transición para el efecto de salto */
+    }
+    .salto {
+      transform: rotate(45deg) translate(-50%, -150%) scale(1.2); /* Subir 100px y aumentar el tamaño */
+    }
+  </style>
+</head>
+<body>
+  <div class="rombo" id="rombo"></div>
+
+  <script>
+    const rombo = document.getElementById('rombo'); // Obtener el div rombo
+
+    // Función para aplicar el salto al rombo
+    function saltarRombo() {
+      // Añadir la clase 'salto' al rombo
+      rombo.classList.add('salto');
+
+      // Remover la clase 'salto' después de la animación para que pueda repetirse
+      setTimeout(() => {
+        rombo.classList.remove('salto');
+      }, 300); // El tiempo de la animación es de 0.3 segundos
+    }
+
+    // Agregar el evento de clic en todo el documento
+    document.body.addEventListener('click', saltarRombo);
+  </script>
+</body>
+</html>

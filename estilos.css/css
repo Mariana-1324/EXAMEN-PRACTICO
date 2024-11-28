@@ -1,0 +1,64 @@
+ body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh; /* Altura de toda la pantalla */
+    }
+
+    .left {
+      width: 50%; /* Ocupa la mitad izquierda de la pantalla */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-row {
+      display: flex;
+      height: 50%; /* La fila superior ocupa la mitad de la izquierda */
+    }
+
+    .dato1, .dato11 {
+      flex: 1; /* Ambas secciones ocupan el mismo espacio horizontal */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .dato1 {
+      background-color: #e4a2f1; /* Naranja */
+    }
+
+    .dato11 {
+      background-color: #ec8686; /* Marrón */
+    }
+
+    .dato2, .dato3 {
+      height: 25%; /* Cada una ocupa el 25% restante */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .dato2 {
+      background-color: #d66565; /* Marrón claro */
+    }
+
+    .dato3 {
+      background-color: #b6f090; /* Verde */
+    }
+
+    .right {
+      width: 50%; /* Ocupa la mitad derecha de la pantalla */
+      background-color: #e09eff; /* Azul */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 3em;
+      font-weight: bold;
+    }
